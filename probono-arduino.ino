@@ -2,10 +2,11 @@
 
 #define voice_recogn_RX 2
 #define voice_recogn_TX 3
-#define button_IN 12
-#define pir_IN 10
 #define bluetooth_RX 6
 #define bluetooth_TX 7
+
+#define button_IN 12
+#define pir_IN 10
 
 #define voice_emergency 111 // 음성 응급호출 111 전송
 #define button_emergency 112 // 버튼 응급호출 112 전송
@@ -70,7 +71,7 @@ void voice_recogn(){ // 음성인식
       case 0x12:
       case 0x13:
       case 0x14:
-      case 0x15 :
+      case 0x15:
         Serial.println("음성 응급호출");
         BT.write(buffer, voice_emergency);
         break;
